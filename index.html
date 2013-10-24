@@ -15,20 +15,14 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
 		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/snugug.css" id="theme">
+		<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+		<!-- <link rel="stylesheet" href="bootstrap/css/bootstrap-theme.min.css"> -->
+		<link rel="stylesheet" href="css/additions.css">
+		<!-- <link rel="stylesheet" href="css/snugug.css" id="theme"> -->
 
 		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
 		<script>
 			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
-		</script>
-		<script type="text/javascript">
-		  (function() {
-		    var config = {
-		      kitId: 'hsu4wwn',
-		      scriptTimeout: 3000
-		    };
-		    var h=document.getElementsByTagName("html")[0];h.className+=" wf-loading";var t=setTimeout(function(){h.className=h.className.replace(/(\s|^)wf-loading(\s|$)/g," ");h.className+=" wf-inactive"},config.scriptTimeout);var tk=document.createElement("script"),d=false;tk.src='//use.typekit.net/'+config.kitId+'.js';tk.type="text/javascript";tk.async="true";tk.onload=tk.onreadystatechange=function(){var a=this.readyState;if(d||a&&a!="complete"&&a!="loaded")return;d=true;clearTimeout(t);try{Typekit.load(config)}catch(b){}};var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(tk,s)
-		  })();
 		</script>
 
 		<!--[if lt IE 9]>
@@ -44,7 +38,7 @@
 			<div class="slides">
 
 				<section>
-					<h1>Winning the Web with Twitter Bootstrap</h1>
+					<h1 class="text-primary">Winning the Web with Twitter Bootstrap</h1>
 					<!-- <h4>Come On, Get Sassy</h4> -->
 				</section>
 
@@ -58,6 +52,210 @@
 						<li class="fragment">Co-Organizer of <a href="github.com/team-sass">Team Sass</a>, <a href="http://sassconf.com">SassConf</a></li>
 					</ul>
 				</section>
+
+				<section id="love" data-transition="zoom">
+					<blockquote>
+						<p>I <span class="glyphicon glyphicon-heart text-danger"></span> Twitter Bootstrap</p>
+						<small><cite title="Sam Richard">Sam Richard</cite></small>
+					</blockquote>
+				</section>
+
+				<section>
+					<section id="device-based-design">
+						<h2>I. Device Based Design</h2>
+					</section>
+					<section id="choosing-mqs">
+						<p>While some may say…</p>
+						<blockquote cite="https://twitter.com/brad_frost/status/191977076000161793" class="fragment">
+							<p>Start with the small screen first, then expand until it looks like shit. TIME FOR A BREAKPOINT!</p>
+							<small><cite title="Stephen Hay">Stephen Hay</cite></small>
+						</blockquote>
+						<p class="fragment">or that…</p>
+						<blockquote class="fragment" cite="http://stephanierieger.com/the-trouble-with-android/">
+							<p>Designing to fixed screen sizes is in fact never a good idea…there is just too much variation, even amongst ‘popular’ devices.</p>
+							<small><cite title="Stephanie Rieger">Stephanie Rieger</cite></small>
+						</blockquote>
+					</section>
+					<section id="bootstrap-device-sizes">
+						<h3>Device Based Breakpoints</h3>
+						<p>Bootstrap expertly divides the web into devices based on <em>Totally Not The iPad's Screen Size™:</em></p>
+						<ul>
+							<li class="fragment"><strong>Extra Small Devices:</strong> Phones,  &lt;768px</li>
+							<li class="fragment"><strong>Small Devices:</strong> Tablets, ≥768px</li>
+							<li class="fragment"><strong>Medium Devices:</strong> Desktops, ≥992px</li>
+							<li class="fragment"><strong>Large Devices:</strong> Desktops, ≥1200px</li>
+						</ul>
+					</section>
+					<section id="hiding-content">
+						<p>While a widely held belief is…</p>
+						<blockquote class="fragment" cite="http://bradfrostweb.com/blog/post/five-responsive-web-design-pitfalls-to-avoid/">
+							<p>Don't penalize users for the device they happen to be browsing with.</p>
+							<small><cite title="Brad Frost">Brad Frost</cite></small>
+						</blockquote>
+					</section>
+					<section id="bootstrap-hides">
+						<h3>Hide/Show Classes</h3>
+						<p>Bootstrap provides an array of device based <code>hide</code> and <code>show</code> classes:</p>
+						<ul>
+							<li class="fragment"><code>.visible-xs</code></li>
+							<li class="fragment"><code>.visible-sm</code></li>
+							<li class="fragment"><code>.visible-md</code></li>
+							<li class="fragment"><code>.visible-lg</code></li>
+							<li class="fragment"><code>.hidden-xs</code></li>
+							<li class="fragment"><code>.hidden-sm</code></li>
+							<li class="fragment"><code>.hidden-md</code></li>
+							<li class="fragment"><code>.hidden-lg</code></li>
+							<li class="fragment"><code>.visible-print</code></li>
+							<li class="fragment"><code>.hidden-print</code></li>
+						</ul>
+					</section>
+				</section>
+
+				<section>
+					<section id="accessibility">
+						<h2>II. Accessibility</h2>
+					</section>
+					<section id="accessable-icons">
+						<h3>Accessible Icons</h3>
+						<p>Iconography is a huge part of modern web development, providing at-a-glance shortcuts.</p>
+						<p class="fragment">Fortunately, Bootstrap has done the research and determined non-sighted users don't need these shortcuts.</p>
+						<ul>
+							<li class="fragment"><span class="glyphicon glyphicon-shopping-cart"></span> <code>&lt;span class="glyphicon glyphicon-shopping-cart"&gt;&lt;/span&gt;</code></li>
+							<li class="fragment"><span class="glyphicon glyphicon-star"></span> <code>&lt;span class="glyphicon glyphicon-star"&gt;&lt;/span&gt;</code></li>
+							<li class="fragment"><span class="glyphicon glyphicon-user"></span> <code>&lt;span class="glyphicon glyphicon-user"&gt;&lt;/span&gt;</code></li>
+							<li class="fragment"><span class="glyphicon glyphicon-exclamation-sign"></span> <code>&lt;span class="glyphicon glyphicon-exclamation-sign"&gt;&lt;/span&gt;</code></li>
+						</ul>
+					</section>
+					<section id="color-blind">
+						<h3>Color Blindness</h3>
+						<p>It's also a good thing Bootstrap has determined that people are color blind don't use the Internet</p>
+						<ul>
+							<li class="fragment text-success">Success Text</li>
+							<li class="fragment text-danger">Danger Text</li>
+							<li class="fragment text-success-red-blind">Success Text (Red Blind)</li>
+							<li class="fragment text-danger-red-blind">
+								Danger Text (Red Blind)
+							</li>
+							<li class="fragment text-success-green-blind">
+								Success Text (Green Blind)
+							</li>
+							<li class="fragment text-danger-green-blind">
+								Danger Text (Green Blind)
+							</li>
+						</ul>
+						<div class="fragment">
+							<button class="btn btn-success">Success</button>
+							<button class="fragment btn btn-danger">Danger</button>
+							<button class="fragment btn btn-success-red-blind">Success (Red Blind)</button>
+							<button class="fragment btn btn-danger-red-blind">
+								Danger (Red Blind)
+							</button>
+							<button class="fragment btn btn-success-green-blind">
+								Success (Green Blind)
+							</button>
+							<button class="fragment btn btn-danger-green-blind">
+								Danger (Green Blind)
+							</button>
+						</div>
+					</section>
+					<section id="poor-eyesight">
+						<h3>Font Sizing</h3>
+						<p>It appears as if the user testing has been done and the authors of Bootstrap has found that no one with bad eyesight uses the Internet either!</p>
+						<ul>
+							<li class="fragment">Base font size is <code>14px</code></li>
+							<li class="fragment">All font sizes measured in <code>px</code>. <small>(It's not like the <a href="http://www.w3.org/Style/Examples/007/units.en.html#font-size">W3C recommends <code>em</code></a> for font sizes)</small></li>
+							<li class="fragment"><a href="http://blog.cloudfour.com/the-ems-have-it-proportional-media-queries-ftw/">Despite what some say</a>, media queries written in <code>px</code> is also much better for accessibility too!</li>
+						</ul>
+					</section>
+				</section>
+
+				<section>
+					<section id="consistency">
+						<h2>III. Consistency</h2>
+					</section>
+					<section id="hobgoblin">
+						<blockquote>
+							<p>…[C]onsistency is the hobgoblin of little minds</p>
+							<small><cite title="Ralph Waldo Emerson">Ralph Waldo Emerson</cite></small>
+						</blockquote>
+					</section>
+					<section id="style-guide">
+						<h3>UI and Markup Consistency</h3>
+						<p>Most people preach consistency when creating style guides, that consistency is good for user experience, but what do they know?</p>
+						<ul>
+							<li class="fragment">Form elements switch between flat UI and skeuomorphic UI</li>
+							<li class="fragment">There are three different colors for primary, success, info, warning, and danger states (not including disabled states)</li>
+							<li class="fragment">Navigation marked up with <code>&lt;ul&gt;/&lt;li&gt;</code> are sometimes marked up with <code>role="presentation"</code>, sometimes not</li>
+						</ul>
+					</section>
+				</section>
+
+				<section>
+					<section id="performance">
+						<h2>IV. Performance</h2>
+					</section>
+					<section id="core-size">
+						<h3>Bootstrap Core File Size</h3>
+						<p>While <a href="http://pewinternet.org/Reports/2013/Cell-Internet/Main-Findings/Cell-Internet.aspx">Pew Internet</a> claims that about 20% of all Americans mostly use their mobile phone for going online, performance really isn't a design constraint for Bootstrap Core, so it doesn't need to be for you!</p>
+						<ul>
+							<li class="fragment"><strong>97 KB</strong> of minified core CSS</li>
+							<li class="fragment"><strong>16 KB</strong> of <code>.woff</code> fonts</li>
+							<li class="fragment"><strong>28 KB</strong> of minified JS (before jQuery)</li>
+						</ul>
+						<p class="fragment">That's <strong>141 KB</strong> of assets before any of your content or any of your site-specific theming, which on <a href="http://www.pcworld.com/article/253808/3g_and_4g_wireless_speed_showdown_which_networks_are_fastest_.html">average 3G download speeds</a> would take about <strong>560ms</strong> to download</p>
+					</section>
+					<section id="responsive-images">
+						<h3>Responsive Images</h3>
+						<p>As we know, responsive images are hard.</p>
+						<p class="fragment">Bootstrap makes them easy! Just has you add a <code>.img-responsive</code> class!</p>
+						<p class="fragment">This will make your full sized images, <a href="http://www.webperformancetoday.com/2013/06/05/web-page-growth-2010-2013/">on average making up 654 KB on a site</a> (<strong>2620ms</strong> at average 3G download speeds), squishy!</p>
+					</section>
+					<section id="speed-delay">
+						<p>To put all this into perspective…</p>
+						<blockquote class="fragment" cite="https://sites.google.com/site/glinden/Home/StanfordDataMining.2006-11-28.ppt?attredirects=0">
+							<p>Every 100ms delay costs [Amazon] 1% of sales</p>
+							<small><cite title="Greg Linden">Greg Linden</cite></small>
+						</blockquote>
+						<p class="fragment">and…</p>
+						<blockquote class="fragment" cite="http://glinden.blogspot.com/2006/11/marissa-mayer-at-web-20.html">
+							<p>At Google, a 500ms delay caused a 20% drop in traffic</p>
+							<small><cite title="Marissa Mayer">Marissa Mayer</cite></small>
+						</blockquote>
+					</section>
+					<section id="from-2006">
+						<h2>But those statistics are from 2006!</h2>
+						<p class="fragment">Surely with everyone now browsing the Internet exclusively on high-speed broadband that's no longer an issue</p>
+					</section>
+				</section>
+
+				<section>
+					<section id="haters">
+						<h2>Haters Gonna Hate</h2>
+					</section>
+					<section id="dont-listen">
+						<p>Who are you going to listen to…</p>
+						<blockquote class="fragment" cite="http://byfat.xxx/deep-emo-shit">
+							<p>…nearly every line [of Bootstrap] is a joke.</p>
+							<small><cite title="Jacob Thornton (@fat), creater of Bootstrap">Jacob Thornton (@fat), creator of Bootstrap</cite></small>
+						</blockquote>
+						<p class="fragment">Don't listen to them</p>
+					</section>
+					<section>
+						<blockquote>
+							<p>Bootstrap is pretty. True Story</p>
+							<small><cite title="Scott Kellum">Scott Kellum</cite></small>
+						</blockquote>
+					</section>
+				</section>
+
+				<section id="love-it-still" data-transition="zoom">
+					<blockquote>
+						<p>I <span class="glyphicon glyphicon-heart text-danger"></span> Twitter Bootstrap</p>
+						<small><cite title="Sam Richard">Sam Richard</cite></small>
+					</blockquote>
+				</section>
+
+
 
 
 
@@ -73,7 +271,7 @@
 
 			</div>
 
-			<div id="pagecounter"></div>
+			<!-- <div id="pagecounter"></div> -->
 
 		</div>
 
@@ -108,6 +306,9 @@
 			});
 
 		</script>
+
+		<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':8088/livereload.js?snipver=1"></' + 'script>')
+    </script>
 
 		<!-- Google Analytics -->
 		<script>

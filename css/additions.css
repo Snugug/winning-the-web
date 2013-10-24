@@ -1,0 +1,33 @@
+/* Color Blind Text */
+
+.text-success-red-blind {
+  color: #847b47;
+}
+.text-danger-red-blind {
+  color: #a5a25c;
+}
+.text-success-green-blind {
+  color: #907650;
+}
+.text-danger-green-blind {
+  color: #b69b57;
+}
+
+/* Color Blind Buttons */
+
+.btn-success-red-blind {
+  color: #fff;
+  background-color: #686236;
+}
+.btn-danger-red-blind {
+  color: #fff;
+  background-color: #655940;
+}
+.btn-success-green-blind {
+  color: #fff;
+  background-color: #715e3d;
+}
+.btn-danger-green-blind {
+  color: #fff;
+  background-color: #71552f;
+}
